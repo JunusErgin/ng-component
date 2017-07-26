@@ -1,6 +1,8 @@
 # ng-component
 
-Simple Bash script to create Angular4 Components without using Angular-CLI Edit
+Simple Bash script to create Angular4 Components without using Angular-CLI.
+If you work with an Angular project which is not based on Angular-CLI, you cannot create new Angular components using Angular-CLI without editing the project settings. 
+ 
 
 ## How to start
 - Download the ng-component.sh

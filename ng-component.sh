@@ -4,6 +4,12 @@
 # Optionally, an NgModule and extra HTML and SCSS files for NativeScript can be created.
 #
 
+####   Configuration   ####
+
+indexFile = "null" # The index file where your Component gets linked (relative link)
+
+#### Configuration end ####
+
 echo "(Folder) Type in the name of the folder you want to create, followed by [ENTER]:"
 read folder
 
@@ -27,7 +33,7 @@ echo "" >> $folder.component.ts
 echo "@Component({" >> $folder.component.ts
 echo "    selector: '"$selector"'," >> $folder.component.ts
 echo "    templateUrl: '"$folder".component.html'," >> $folder.component.ts
-echo "    styleUrls: '"$folder".component.css'," >> $folder.component.ts
+echo "    styleUrls: ['"$folder".component.css']," >> $folder.component.ts
 echo "    moduleId: module.id" >> $folder.component.ts
 echo "})" >> $folder.component.ts
 echo "export class "$component"Component {" >> $folder.component.ts
@@ -38,7 +44,7 @@ echo "" >> $folder.component.ts
 echo "}" >> $folder.component.ts
 
 # Creating html and scss file
-echo "" > $folder.component.html
+echo "<h1>"$component"Component</h1>" > $folder.component.html
 echo "" > $folder.component.scss
 
 # Create a routes file
@@ -56,7 +62,7 @@ while true; do
 		echo "    }" >> $folder.routes.ts; 
 		echo "];" >> $folder.routes.ts; 
 		break;;
-        [Nn]* ) exit;;
+        [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
@@ -78,7 +84,7 @@ while true; do
 		echo "export class "$component"Module {" >> $folder.module.ts; 
 		echo "}" >> $folder.module.ts; 
 		break;;
-        [Nn]* ) exit;;
+        [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
@@ -91,11 +97,11 @@ while true; do
         [Yy]* ) echo "" > $folder.component.tns.html
 		echo "" > $folder.component.tns.scss
 		break;;
-        [Nn]* ) exit;;
+        [Nn]* ) break;;
         * ) echo "Please answer yes or no.";;
     esac
 done
 
 cd ..
 echo "Your component was successfully created"
-read
+read 

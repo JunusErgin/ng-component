@@ -20,7 +20,7 @@ If you work with an Angular project which is not based on Angular-CLI, you canno
 - In order to run the script from the Webstorm Terminal, you need to write a small *wrapper file* in your System32
 
 ## Additional Information
-- You don't have to add the postfix Compoent, it will be automatically added as a postfix.
+- You don't have to add the suffix 'Component' to the name of a component, it will be added automatically.
 - The first letter your component gets converted to upper case due to the Angular style guidelines.
 
 

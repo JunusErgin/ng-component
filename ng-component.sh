@@ -57,7 +57,7 @@ while true; do
 		echo "" >> $folder.routes.ts; 
 		echo "export const "$component"Routes: Array<any> = [" >> $folder.routes.ts; 
 		echo "    {" >> $folder.routes.ts; 
-		echo "        path: '"$route"'" >> $folder.routes.ts; 
+		echo "        path: '"$route"'," >> $folder.routes.ts; 
 		echo "        component: "$component"Component" >> $folder.routes.ts; 
 		echo "    }" >> $folder.routes.ts; 
 		echo "];" >> $folder.routes.ts; 

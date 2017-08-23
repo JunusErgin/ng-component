@@ -102,6 +102,17 @@ while true; do
     esac
 done
 
+# Ask for Git
+while true; do
+    read -p "(Git) Do you want to add the files to Git? [Y/N]" yn
+    case $yn in
+        [Yy]* ) git add .
+		break;;
+        [Nn]* ) break;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
+
 cd ..
 echo "Your component was successfully created"
 read 

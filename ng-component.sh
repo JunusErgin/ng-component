@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This script automatically creates a component for in Angular 4 app in the current directory.
+# This script automatically creates a component for in Angular app in the current directory.
 # Optionally, an NgModule and extra HTML and SCSS files for NativeScript can be created.
 #
 
